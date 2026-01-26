@@ -1,8 +1,8 @@
 import {router} from './router.js';
+import {msg} from './widgets/msg.js';
 //import {header} from './widgets/header.js';
 //import {search} from './widgets/search.js';
 //import {popup} from './widgets/popup.js';
-//import {msg} from './widgets/msg.js';
 //import {google} from './widgets/google.js';
 //import {img} from './widgets/img.js';
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const main = {
         data(){
             return {
-                url: "http://affiliate.yanbasok.com",
+                url: "https://affiliate.yanbasok.com",
                 user: {name:"", phone:"", email:"", date:"", auth:""},
                 formData:{},
                 title:"",
@@ -98,8 +98,7 @@ document.addEventListener('DOMContentLoaded', function(){
 };
 
 var app = Vue.createApp(main)
+.component('msg',msg)
 .use(router)
 .mount('#content')
 });
-
-
