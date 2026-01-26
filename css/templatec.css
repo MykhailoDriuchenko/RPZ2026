@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #eef2f5;
+}
+
+/* основной layout */
+.flex {
+    display: flex;
+    height: 100vh;
+}
+
+/* ЛЕВАЯ часть — картинка */
+#right-area {
+    width: 70%;
+    height: 100vh;
+}
+
+#right-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ПРАВАЯ часть — логин */
+#left-area {
+    width: 30%;
+    background: #eef2f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* шапка */
+#left-area .header {
+    background: #3b3b3b;
+    color: #fff;
+    padding: 20px;
+}
+
+#left-area .header .wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 110px;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    text-align: right;
+}
+
+/* форма */
+.form.inner-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form form {
+    width: 100%;
+    max-width: 320px;
+}
+
+/* поля */
+.row {
+    margin-bottom: 18px;
+}
+
+label {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #d6dbe1;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00c26f;
+}
+
+/* кнопка */
+.btn {
+    width: 100%;
+    padding: 11px;
+    background: #00c26f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #00ad62;
+}
+
+/* утилиты */
+.w40, .w60 {
+    width: auto;
+}
+
+.p20 {
+    padding: 0;
+}
+
+.al {
+    text-align: right;
+}
+
+
+
+.alertMsg{
+    font-size: inherit;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 10px;
+    z-index: 999;
+    height: auto;
+    display: none;
+    color: red;
+    background-color: rgba(255, 228, 228, 0.75);
+    box-shadow: 0px 0 10px 0px rgba(205, 30, 11, 0.5);
+    animation: showFromLeft 0.3s linear;
+}
+
+.successMsg{
+    font-size: inherit;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 10px;
+    z-index: 999;
+    height: auto;
+    display: none;
+    color: green;
+    background-color: rgba(218, 249, 223, 0.75);
+    box-shadow: 0px 0 10px 0px rgb(11 205 61 / 50%);
+    animation: showFromLeft 0.3s normal;
+}
