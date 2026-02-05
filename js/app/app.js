@@ -1,8 +1,8 @@
 import {router} from './router.js';
 import {msg} from './widgets/msg.js';
-//import {header} from './widgets/header.js';
+import {popup} from './widgets/popup.js';
+import {header} from './widgets/header.js';
 //import {search} from './widgets/search.js';
-//import {popup} from './widgets/popup.js';
 //import {google} from './widgets/google.js';
 //import {img} from './widgets/img.js';
 
@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function(){
 };
 
 var app = Vue.createApp(main)
+.component('Header',header)
+.component('popup',popup)
 .component('msg',msg)
 .use(router)
 .mount('#content')
