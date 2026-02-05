@@ -77,6 +77,10 @@ h2{font-size:18px;}
     margin:26px 0 0;
 }
 
+.row{
+    margin:0 0 15px;
+}
+
 /* ===== Forms ===== */
 .inner-form input[type=text],
 .inner-form input[type=date],
@@ -294,3 +298,4 @@ h2{font-size:18px;}
         height:100% !important;
     }
 }
+
