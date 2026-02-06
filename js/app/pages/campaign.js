@@ -423,7 +423,7 @@ export const campaign = {
 						<tr v-for="(item,i) in data.items">
 							<td class="id">{{item.id}}</td>
 							<td class="id">
-								<toogle :modelValue="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd();" />
+								<toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd();" />
 							</td>
 							<td class="image">
 								<a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
