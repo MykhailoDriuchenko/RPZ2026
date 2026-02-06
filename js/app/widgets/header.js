@@ -89,7 +89,7 @@ export const header = {
         </div>
 
         <div class="w10 al" id="user-top" v-if="parent.user && parent.user.user">
-          <div id="user-circle" @click="toogleActive()">
+          <div id="user-circle" @click="toggleActive()">
             {{parent.user.user[0]}}
           </div>
 
@@ -100,7 +100,7 @@ export const header = {
             </a>
           </div>
 
-          <i @click="toogleActive()" class="fas fa-caret-down"></i>
+          <i @click="toggleActive()" class="fas fa-caret-down"></i>
         </div>
       </div>
     </div>
